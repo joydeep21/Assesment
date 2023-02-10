@@ -22,9 +22,12 @@ function Search({ data, selectedRating, selectedCategory, searchData }) {
                 </Dropdown></Col>
                 <Col><Form.Select size="lg" onChange={selectedCategory}>
                     <option value=''>Gener</option>
-                    {data.map((item,index) => (
-                        <option key={index} value={item.category}>{item.category}</option>
-                    ))}
+                    <option value=''>Any Gener</option>
+                    <option value='action'>Action</option>
+                    <option value='drama'>Drama</option>
+                    <option value='comedy'>Comedy</option>
+                    <option value='thriller'>Thriller</option>
+                   
                 </Form.Select></Col>
             </Row>
         </Container>

@@ -59,7 +59,7 @@ const App = () => {
     if (rating && product.rating >= rating) {
       return false;
     }
-    if (category && product.category !== category) {
+    if (category && product.category.toLocaleLowerCase() !== category.toLocaleLowerCase() && category!=="") {
       return false;
     }
     if (search && !product.title.toLowerCase().includes(search.toLowerCase())) {
